@@ -11,9 +11,9 @@
     --amber: #92400e; --amber-light: #fef3c7;
     --red: #dc2626; --red-light: #fee2e2; --text: #1e293b; --bg: #f8fafc; --card: #ffffff;
   }
-  * { touch-action: manipulation; box-sizing: border-box; }
+  * { box-sizing: border-box; }
   body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 10px; margin: 0; }
-  .app { max-width: 800px; margin: 0 auto; }
+  .app { max-width: 800px; margin: 0 auto; padding-bottom: 50px; }
   
   .heft-notice { 
     background: #fffbeb; border: 2px solid #f59e0b; border-radius: 12px; padding: 20px; margin: 20px 0;
@@ -41,12 +41,12 @@
   .quiz-option.selected { border-color: var(--blue); background: var(--blue-light); }
 
   .nav-nav { display: flex; justify-content: space-between; margin-top: 30px; padding-top: 20px; border-top: 2px solid #f1f5f9; gap: 10px; }
-  .btn-next { background: var(--blue-dark); color: white; border: none; padding: 12px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 1rem; flex: 1; text-align: center; }
-  .btn-back { background: #64748b; color: white; border: none; padding: 12px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 1rem; flex: 1; text-align: center; }
+  .btn-next { background: var(--blue-dark); color: white; border: none; padding: 14px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 1rem; flex: 1; text-align: center; }
+  .btn-back { background: #64748b; color: white; border: none; padding: 14px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 1rem; flex: 1; text-align: center; }
   .btn-next:disabled { opacity: 0.3; cursor: not-allowed; }
 
   #dnd-container { 
-    position: relative; width: 100%; height: 480px; 
+    position: relative; width: 100%; height: 500px; 
     background-color: #ffffff;
     background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
     background-size: 20px 20px;
@@ -116,20 +116,18 @@
       </div>
       <div class="heft-notice" style="display:block;">
         <p><strong>1) Magnesium (Mg) im Schalenmodell</strong></p>
-        <p>Zeichne ein Mg-Atom mit 3 Schalen. Kern mit <strong>p=12</strong>. Zeichne alle 12 Elektronen (2-8-2) korrekt <u>in</u> die Schalen. Beschrifte Valenzelektronen und Kern.</p>
+        <p>Kern mit p=12. Elektronen: 2 innen, 8 mittig, 2 außen <u>in</u> die Schalen. Beschrifte Valenzelektronen und Kern.</p>
         <button class="check-btn" style="background: var(--amber)" onclick="showPattern('pattern2')">Lösung ansehen</button>
         <div id="pattern2" class="pattern-solution">
             <svg width="240" height="240" viewBox="0 0 200 200">
-                <circle cx="100" cy="100" r="30" fill="none" stroke="#ccc" />
-                <circle cx="100" cy="100" r="60" fill="none" stroke="#ccc" />
-                <circle cx="100" cy="100" r="90" fill="none" stroke="#ccc" />
-                <circle cx="100" cy="100" r="16" fill="#dbeafe" stroke="#3b82f6"/><text x="100" y="104" text-anchor="middle" font-size="9" font-weight="bold">p=12</text>
-                <circle cx="100" cy="80" r="3.5" fill="#64748b"/><circle cx="100" cy="120" r="3.5" fill="#64748b"/>
-                <circle cx="100" cy="52" r="3.5" fill="#64748b"/><circle cx="100" cy="148" r="3.5" fill="#64748b"/><circle cx="52" cy="100" r="3.5" fill="#64748b"/><circle cx="148" cy="100" r="3.5" fill="#64748b"/>
-                <circle cx="66" cy="66" r="3.5" fill="#64748b"/><circle cx="134" cy="134" r="3.5" fill="#64748b"/><circle cx="66" cy="134" r="3.5" fill="#64748b"/><circle cx="134" cy="66" r="3.5" fill="#64748b"/>
-                <circle cx="130" cy="25" r="4.5" fill="#f59e0b"/><circle cx="100" cy="185" r="4.5" fill="#f59e0b"/>
-                <line x1="130" y1="20" x2="165" y2="10" stroke="black"/><text x="168" y="13" font-size="10" font-weight="bold">Valenzelektronen</text>
-                <line x1="110" y1="100" x2="160" y2="100" stroke="black"/><text x="163" y="103" font-size="10" font-weight="bold">Atomkern</text>
+                <circle cx="100" cy="100" r="28" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="58" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="88" fill="none" stroke="#ccc" />
+                <circle cx="100" cy="100" r="14" fill="#dbeafe" stroke="#3b82f6"/><text x="100" y="104" text-anchor="middle" font-size="9" font-weight="bold">p=12</text>
+                <circle cx="100" cy="85" r="3.5" fill="#64748b"/><circle cx="100" cy="115" r="3.5" fill="#64748b"/>
+                <circle cx="100" cy="58" r="3.5" fill="#64748b"/><circle cx="100" cy="142" r="3.5" fill="#64748b"/><circle cx="58" cy="100" r="3.5" fill="#64748b"/><circle cx="142" cy="100" r="3.5" fill="#64748b"/>
+                <circle cx="71" cy="71" r="3.5" fill="#64748b"/><circle cx="129" cy="129" r="3.5" fill="#64748b"/><circle cx="71" cy="129" r="3.5" fill="#64748b"/><circle cx="129" cy="71" r="3.5" fill="#64748b"/>
+                <circle cx="120" cy="18" r="4.5" fill="#f59e0b"/><circle cx="100" cy="185" r="4.5" fill="#f59e0b"/>
+                <line x1="120" y1="15" x2="160" y2="5" stroke="black"/><text x="165" y="8" font-size="10">Valenzelektronen</text>
+                <line x1="112" y1="100" x2="150" y2="100" stroke="black"/><text x="155" y="103" font-size="10">Atomkern</text>
             </svg>
         </div>
       </div>
@@ -146,13 +144,13 @@
     </div>
     <div id="step3_part2" style="display:none; margin-top:25px;">
         <div style="text-align:center; background: #fff; padding: 20px; border-radius: 15px; border: 1.5 solid #e2e8f0; margin: 15px 0;">
-          <svg width="240" height="240" viewBox="0 0 200 200">
-            <circle cx="100" cy="100" r="30" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="60" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="90" fill="none" stroke="#ccc" id="outer-l" />
-            <circle cx="100" cy="100" r="16" fill="#dbeafe" stroke="#3b82f6"/><text x="100" y="104" text-anchor="middle" font-size="10" font-weight="bold">p=12</text>
-            <circle cx="100" cy="82" r="4" fill="#64748b"/><circle cx="100" cy="118" r="4" fill="#64748b"/>
-            <circle cx="100" cy="55" r="4" fill="#64748b"/><circle cx="100" cy="145" r="4" fill="#64748b"/><circle cx="55" cy="100" r="4" fill="#64748b"/><circle cx="145" cy="100" r="4" fill="#64748b"/>
-            <circle cx="68" cy="68" r="4" fill="#64748b"/><circle cx="132" cy="132" r="4" fill="#64748b"/><circle cx="68" cy="132" r="4" fill="#64748b"/><circle cx="132" cy="68" r="4" fill="#64748b"/>
-            <circle cx="100" cy="25" r="5" fill="#f59e0b" id="v1"/><circle cx="100" cy="175" r="5" fill="#f59e0b" id="v2"/>
+          <svg width="220" height="220" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="28" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="58" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="88" fill="none" stroke="#ccc" id="outer-l" />
+            <circle cx="100" cy="100" r="14" fill="#dbeafe" stroke="#3b82f6"/><text x="100" y="104" text-anchor="middle" font-size="10" font-weight="bold">p=12</text>
+            <circle cx="100" cy="85" r="4" fill="#64748b"/><circle cx="100" cy="115" r="4" fill="#64748b"/>
+            <circle cx="100" cy="58" r="4" fill="#64748b"/><circle cx="100" cy="142" r="4" fill="#64748b"/><circle cx="58" cy="100" r="4" fill="#64748b"/><circle cx="142" cy="100" r="4" fill="#64748b"/>
+            <circle cx="71" cy="71" r="4" fill="#64748b"/><circle cx="129" cy="129" r="4" fill="#64748b"/><circle cx="71" cy="129" r="4" fill="#64748b"/><circle cx="129" cy="71" r="4" fill="#64748b"/>
+            <circle cx="100" cy="15" r="5" fill="#f59e0b" id="v1"/><circle cx="100" cy="175" r="5" fill="#f59e0b" id="v2"/>
           </svg><br><button class="check-btn" id="animBtn3" onclick="runAnim()">▶ Elektronen abgeben</button>
         </div>
         <div class="task-area" id="charge-task" style="display:none;">
@@ -162,7 +160,7 @@
         <div id="definitions-block" style="display:none;">
             <div class="fachbegriff-box" style="display:block;">
                 <p><strong>Atomrumpf:</strong> positiv geladener Rest eines Metallatoms nach Abgabe der Valenzelektronen (Kern + Innenelektronen).</p>
-                <p><strong>delokalisiert:</strong> „nicht mehr an ein bestimmtes Atom gebunden“. Die freigesetzten Elektronen gehören keinem einzelnen Atom mehr.</p>
+                <p><strong>delokalisiert:</strong> „nicht mehr an ein bestimmtes Atom gebunden“. Die freigesetzten Elektronen gehören nach der Abgabe keinem einzelnen Atom mehr – sie können sich frei bewegen.</p>
             </div>
             <div class="heft-notice" style="display:block;">
                 <p><strong>Arbeitsauftrag 1:</strong> Übernimm die beiden Definitionen exakt so in dein Heft.</p>
@@ -171,19 +169,19 @@
         </div>
         <div id="simple-task" style="display:none;">
             <div class="heft-notice" style="display:block;">
-                <p><strong>Arbeitsauftrag 2: Mg²⁺ als einfaches Modell</strong></p>
+                <p><strong>Arbeitsauftrag 2: Magnesium (Mg²⁺) als einfaches Modell</strong></p>
                 <ol>
                     <li>Blauer Kreis mit <strong>2+</strong> in der Mitte (positiver Atomrumpf).</li>
                     <li>Großer <strong>gestrichelter Kreis</strong> darum herum.</li>
-                    <li>Zwei kleine Punkte <u>in</u> den gestrichelten Kreis zeichnen.</li>
+                    <li>Zwei kleine Punkte <u>in</u> den Bereich des gestrichelten Kreises.</li>
                     <li>Beschrifte: <em>positiver Atomrumpf</em> und <em>Valenzelektronen</em>.</li>
                 </ol>
                 <button class="check-btn" style="background:var(--amber); margin-top:10px" onclick="showPattern('pattern-s')">Lösung ansehen</button>
                 <div id="pattern-s" class="pattern-solution">
                     <svg width="220" height="220" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="42" fill="none" stroke="#94a3b8" stroke-dasharray="3"/><circle cx="50" cy="50" r="14" fill="#dbeafe" stroke="#3b82f6"/><text x="50" y="53" text-anchor="middle" font-size="6" font-weight="bold">2+</text>
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="#94a3b8" stroke-dasharray="3"/><circle cx="50" cy="50" r="14" fill="#dbeafe" stroke="#3b82f6"/><text x="50" y="53" text-anchor="middle" font-size="6" font-weight="bold">2+</text>
                         <circle cx="50" cy="22" r="2.5" fill="#f59e0b"/><circle cx="50" cy="78" r="2.5" fill="#f59e0b"/>
-                        <line x1="62" y1="50" x2="82" y2="45" stroke="black" stroke-width="0.5"/><text x="84" y="46" font-size="5" font-weight="bold">positiver Atomrumpf</text>
+                        <line x1="62" y1="50" x2="80" y2="45" stroke="black" stroke-width="0.5"/><text x="82" y="46" font-size="5" font-weight="bold">positiver Atomrumpf</text>
                         <line x1="50" y1="22" x2="75" y2="15" stroke="black" stroke-width="0.5"/><text x="77" y="16" font-size="5" font-weight="bold">Valenzelektronen</text>
                     </svg>
                 </div>
@@ -196,9 +194,10 @@
   <div class="step" id="step-4">
     <span style="font-weight:bold; color:var(--blue);">SCHRITT 4</span>
     <h2>Das Metallgitter bauen</h2>
-    <p>Ordne die Atomrümpfe am dichtesten an. Nutze die <strong>5 Tipps</strong> unten.</p>
+    <p>Ordne die Atomrümpfe am dichtesten an. **Achtung: Es muss eine versetzte Anordnung sein!** Nutze die 5 Tipps unten.</p>
     <div id="dnd-container">
         <div class="draggable-complex locked" style="left:120px; top:120px;"><div class="shell-dashed"></div><div class="core-inner">2+</div><div class="electron-small e-pos-1"></div><div class="electron-small e-pos-2"></div></div>
+        
         <div class="draggable-complex" style="left:60px; top:360px;"><div class="shell-dashed"></div><div class="core-inner">2+</div><div class="electron-small e-pos-1"></div><div class="electron-small e-pos-2"></div></div>
         <div class="draggable-complex" style="left:140px; top:360px;"><div class="shell-dashed"></div><div class="core-inner">2+</div><div class="electron-small e-pos-1"></div><div class="electron-small e-pos-2"></div></div>
         <div class="draggable-complex" style="left:220px; top:360px;"><div class="shell-dashed"></div><div class="core-inner">2+</div><div class="electron-small e-pos-1"></div><div class="electron-small e-pos-2"></div></div>
@@ -277,7 +276,6 @@
   }
 
   function runAnim() {
-    document.getElementById('animBtn3').disabled=true;
     document.getElementById('v1').style.transition="all 1.2s ease-in"; document.getElementById('v1').style.transform="translate(-130px, -40px)";
     document.getElementById('v2').style.transition="all 1.2s ease-in"; document.getElementById('v2').style.transform="translate(130px, 40px)";
     document.getElementById('outer-l').style.opacity="0.1";
@@ -285,15 +283,8 @@
   }
 
   function confirmStep3Definitions() { document.getElementById('simple-task').style.display='block'; }
-  function selectBondOption(type, id) { 
-    document.querySelectorAll('#step-5 .quiz-option').forEach(opt => opt.classList.remove('selected')); 
-    document.getElementById(id).classList.add('selected'); 
-    selectedBondType = type; 
-  }
-  function checkStep5() { 
-    if(selectedBondType === 'correct') { document.getElementById('final-def').style.display='block'; document.getElementById('btn5').disabled=true; } 
-    else { alert("Überlege nochmal: Welche Teilchen ziehen sich gegenseitig an?"); } 
-  }
+  function selectBondOption(type, id) { document.querySelectorAll('#step-5 .quiz-option').forEach(opt => opt.classList.remove('selected')); document.getElementById(id).classList.add('selected'); selectedBondType = type; }
+  function checkStep5() { if(selectedBondType === 'correct') { document.getElementById('final-def').style.display='block'; document.getElementById('btn5').disabled=true; } else { alert("Das stimmt noch nicht ganz!"); } }
   function showNextTip() { document.getElementById('tipp-list-container').style.display = 'block'; if(tipIdx < 5) { tipIdx++; document.getElementById('tip-' + tipIdx).style.display = 'block'; } }
 
   const container = document.getElementById('dnd-container');
@@ -310,31 +301,39 @@
 
   function checkGrid() {
     const all = document.querySelectorAll('.draggable-complex');
-    const f = document.getElementById('grid-f');
-    f.style.display = 'block';
+    const f = document.getElementById('grid-f'); f.style.display = 'block';
     let pos = Array.from(all).map(a => ({ x: parseFloat(a.style.left), y: parseFloat(a.style.top) }));
+
     pos.sort((a, b) => a.y - b.y);
     let r1 = pos.slice(0, 3).sort((a,b) => a.x - b.x);
     let r2 = pos.slice(3, 6).sort((a,b) => a.x - b.x);
+    let r3 = pos.slice(6, 9).sort((a,b) => a.x - b.x);
+
     let minX = Math.min(...pos.map(p => p.x)), maxX = Math.max(...pos.map(p => p.x));
     let minY = Math.min(...pos.map(p => p.y)), maxY = Math.max(...pos.map(p => p.y));
     let spread = (maxX - minX) + (maxY - minY);
 
-    if(spread > 900) {
-      f.innerText = "Die Teilchen sind noch viel zu locker verteilt. Schiebe sie enger zusammen.";
-      f.style.color = "var(--amber)";
+    if(spread > 850) {
+      f.innerText = "Das Gitter ist noch viel zu locker gepackt. Schiebe die Teilchen enger zusammen!";
+      f.style.color = "var(--red)";
       return;
     }
+
+    // Offset-Validierung (WICHTIG!)
     let avgX1 = (r1[0].x + r1[1].x + r1[2].x) / 3;
     let avgX2 = (r2[0].x + r2[1].x + r2[2].x) / 3;
-    let xOffset = Math.abs(avgX1 - avgX2);
+    let avgX3 = (r3[0].x + r3[1].x + r3[2].x) / 3;
 
-    if(xOffset < 25) {
-      f.innerText = "Das ist ein ordentliches Gitter, aber noch nicht die 'dichteste Packung'. Metalle ordnen sich versetzt an (wie bei einer Eierpackung). Schiebe die zweite Reihe so, dass die Kerne unter den Lücken der ersten Reihe liegen.";
-      f.style.color = "var(--amber)";
+    let offset12 = Math.abs(avgX1 - avgX2);
+    let offset23 = Math.abs(avgX2 - avgX3);
+
+    if(offset12 < 35 || offset23 < 35) {
+      f.innerText = "Das ist noch eine quadratische Struktur. Metalle ordnen sich versetzt an (Lücke auf Lücke), um stabiler zu sein. Verschiebe die mittlere Reihe!";
+      f.style.color = "var(--red)";
+      f.style.border = "2px solid var(--red)";
     } else {
-      f.innerText = "Hervorragend gepackt! Du hast das versetzte Metallgitter korrekt aufgebaut.";
-      f.style.color = "var(--green)";
+      f.innerText = "Hervorragend! Das versetzte Metallgitter ist korrekt und stabil gepackt.";
+      f.style.color = "var(--green)"; f.style.border = "none";
       document.getElementById('checkG').disabled = true;
       all.forEach(a => a.classList.add('locked'));
       document.getElementById('task4').style.display = 'block';
