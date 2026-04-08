@@ -16,7 +16,7 @@
   .app { max-width: 800px; margin: 0 auto; }
   
   .heft-notice { 
-    background: #fffbeb; border: 2px solid #f59e0b; border-radius: 12px; padding: 15px; margin: 20px 0;
+    background: #fffbeb; border: 2px solid #f59e0b; border-radius: 12px; padding: 20px; margin: 20px 0;
     position: relative; box-shadow: 0 2px 10px rgba(0,0,0,0.05); display: none;
   }
   .heft-notice::before { content: "✏️ HEFTEINTRAG"; position: absolute; top: -12px; left: 15px; background: #f59e0b; color: white; font-size: 0.75rem; font-weight: bold; padding: 4px 12px; border-radius: 6px; }
@@ -41,8 +41,8 @@
   .quiz-option.selected { border-color: var(--blue); background: var(--blue-light); }
 
   .nav-nav { display: flex; justify-content: space-between; margin-top: 30px; padding-top: 20px; border-top: 2px solid #f1f5f9; gap: 10px; }
-  .btn-next { background: var(--blue-dark); color: white; border: none; padding: 14px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 1rem; flex: 1; text-align: center; }
-  .btn-back { background: #64748b; color: white; border: none; padding: 14px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 1rem; flex: 1; text-align: center; }
+  .btn-next { background: var(--blue-dark); color: white; border: none; padding: 12px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 1rem; flex: 1; text-align: center; }
+  .btn-back { background: #64748b; color: white; border: none; padding: 12px 20px; border-radius: 10px; cursor: pointer; font-weight: bold; font-size: 1rem; flex: 1; text-align: center; }
   .btn-next:disabled { opacity: 0.3; cursor: not-allowed; }
 
   #dnd-container { 
@@ -51,8 +51,7 @@
     background-image: linear-gradient(#e5e7eb 1px, transparent 1px), linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
     background-size: 20px 20px;
     border: 2px solid #cbd5e1; border-radius: 15px; margin: 25px 0; 
-    overflow: hidden; 
-    touch-action: auto;
+    overflow: hidden; touch-action: auto;
   }
 
   .draggable-complex {
@@ -72,7 +71,6 @@
   .feedback-msg { margin: 10px 0; padding: 12px; border-radius: 8px; font-weight: bold; display: none; }
   .tipp-list { background: #fffbeb; border: 1.5px solid var(--amber); border-radius: 10px; padding: 15px; margin: 10px 0; display: none; }
   .tipp-item { margin-bottom: 12px; padding-bottom: 10px; border-bottom: 1px dashed #fcd34d; display: none; font-size: 0.95rem; line-height: 1.4; }
-  .tipp-item:last-child { border-bottom: none; }
   .pattern-solution { display: none; background: white; border: 2px solid var(--blue); border-radius: 10px; padding: 20px; margin-top: 15px; text-align: center; }
   .pattern-solution img { max-width: 100%; height: auto; margin-top: 10px; border: 1px solid #ccc; }
 
@@ -114,20 +112,24 @@
     <div id="info2" style="display:none;">
       <div class="fachbegriff-box" style="display:block;">
         <strong>Valenzelektronen</strong>
-        Die Elektronen auf der äußersten Schale nennt man Valenzelektronen. Sie sind am schwächsten an den Atomkern gebunden.
+        Die Elektronen auf der äußersten Schale nennt man Valenzelektronen. Sie sind am schwächsten an den Kern gebunden.
       </div>
       <div class="heft-notice" style="display:block;">
         <p><strong>1) Magnesium (Mg) im Schalenmodell</strong></p>
-        <p>Kern mit p=12. Elektronen: 2 innen, 8 mittig, 2 außen <u>in</u> die Schalen. Beschrifte Valenzelektronen und Kern.</p>
-        <button class="check-btn" style="background: var(--amber)" onclick="showPattern('pattern2')">Musterlösung ansehen</button>
+        <p>Zeichne ein Mg-Atom mit 3 Schalen. Kern mit <strong>p=12</strong>. Zeichne alle 12 Elektronen (2-8-2) korrekt <u>in</u> die Schalen. Beschrifte Valenzelektronen und Kern.</p>
+        <button class="check-btn" style="background: var(--amber)" onclick="showPattern('pattern2')">Lösung ansehen</button>
         <div id="pattern2" class="pattern-solution">
-            <svg width="220" height="220" viewBox="0 0 200 200">
-                <circle cx="100" cy="100" r="28" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="58" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="88" fill="none" stroke="#ccc" />
-                <circle cx="100" cy="100" r="14" fill="#dbeafe" stroke="#3b82f6"/><text x="100" y="104" text-anchor="middle" font-size="9" font-weight="bold">p=12</text>
-                <circle cx="100" cy="85" r="3.5" fill="#64748b"/><circle cx="100" cy="115" r="3.5" fill="#64748b"/>
-                <circle cx="100" cy="45" r="4" fill="#f59e0b"/><circle cx="100" cy="155" r="4" fill="#f59e0b"/>
-                <line x1="100" y1="40" x2="140" y2="20" stroke="black"/><text x="145" y="20" font-size="10">Valenzelektronen</text>
-                <line x1="110" y1="100" x2="140" y2="100" stroke="black"/><text x="145" y="103" font-size="10">Atomkern</text>
+            <svg width="240" height="240" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="30" fill="none" stroke="#ccc" />
+                <circle cx="100" cy="100" r="60" fill="none" stroke="#ccc" />
+                <circle cx="100" cy="100" r="90" fill="none" stroke="#ccc" />
+                <circle cx="100" cy="100" r="16" fill="#dbeafe" stroke="#3b82f6"/><text x="100" y="104" text-anchor="middle" font-size="9" font-weight="bold">p=12</text>
+                <circle cx="100" cy="80" r="3.5" fill="#64748b"/><circle cx="100" cy="120" r="3.5" fill="#64748b"/>
+                <circle cx="100" cy="52" r="3.5" fill="#64748b"/><circle cx="100" cy="148" r="3.5" fill="#64748b"/><circle cx="52" cy="100" r="3.5" fill="#64748b"/><circle cx="148" cy="100" r="3.5" fill="#64748b"/>
+                <circle cx="66" cy="66" r="3.5" fill="#64748b"/><circle cx="134" cy="134" r="3.5" fill="#64748b"/><circle cx="66" cy="134" r="3.5" fill="#64748b"/><circle cx="134" cy="66" r="3.5" fill="#64748b"/>
+                <circle cx="130" cy="25" r="4.5" fill="#f59e0b"/><circle cx="100" cy="185" r="4.5" fill="#f59e0b"/>
+                <line x1="130" y1="20" x2="165" y2="10" stroke="black"/><text x="168" y="13" font-size="10" font-weight="bold">Valenzelektronen</text>
+                <line x1="110" y1="100" x2="160" y2="100" stroke="black"/><text x="163" y="103" font-size="10" font-weight="bold">Atomkern</text>
             </svg>
         </div>
       </div>
@@ -144,21 +146,23 @@
     </div>
     <div id="step3_part2" style="display:none; margin-top:25px;">
         <div style="text-align:center; background: #fff; padding: 20px; border-radius: 15px; border: 1.5 solid #e2e8f0; margin: 15px 0;">
-          <svg width="220" height="220" viewBox="0 0 200 200">
-            <circle cx="100" cy="100" r="28" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="58" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="88" fill="none" stroke="#ccc" id="outer-l" />
-            <circle cx="100" cy="100" r="14" fill="#dbeafe" stroke="#3b82f6"/><text x="100" y="104" text-anchor="middle" font-size="10" font-weight="bold">p=12</text>
-            <circle cx="100" cy="85" r="4" fill="#64748b"/><circle cx="100" cy="115" r="4" fill="#64748b"/>
+          <svg width="240" height="240" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="30" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="60" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="90" fill="none" stroke="#ccc" id="outer-l" />
+            <circle cx="100" cy="100" r="16" fill="#dbeafe" stroke="#3b82f6"/><text x="100" y="104" text-anchor="middle" font-size="10" font-weight="bold">p=12</text>
+            <circle cx="100" cy="82" r="4" fill="#64748b"/><circle cx="100" cy="118" r="4" fill="#64748b"/>
+            <circle cx="100" cy="55" r="4" fill="#64748b"/><circle cx="100" cy="145" r="4" fill="#64748b"/><circle cx="55" cy="100" r="4" fill="#64748b"/><circle cx="145" cy="100" r="4" fill="#64748b"/>
+            <circle cx="68" cy="68" r="4" fill="#64748b"/><circle cx="132" cy="132" r="4" fill="#64748b"/><circle cx="68" cy="132" r="4" fill="#64748b"/><circle cx="132" cy="68" r="4" fill="#64748b"/>
             <circle cx="100" cy="25" r="5" fill="#f59e0b" id="v1"/><circle cx="100" cy="175" r="5" fill="#f59e0b" id="v2"/>
           </svg><br><button class="check-btn" id="animBtn3" onclick="runAnim()">▶ Elektronen abgeben</button>
         </div>
         <div class="task-area" id="charge-task" style="display:none;">
-            <p><strong>Ladungs-Bilanz:</strong> Bestimme die Gesamtladung, die das Teilchen jetzt hat.</p>
+            <p><strong>Ladungs-Bilanz:</strong> Welche Gesamtladung hat das Teilchen jetzt?</p>
             <div class="input-row"><input type="text" id="q3_charge" data-ans="2+|+2"><button class="check-btn" onclick="checkAnswer('q3_charge', this)">Prüfen</button></div>
         </div>
         <div id="definitions-block" style="display:none;">
             <div class="fachbegriff-box" style="display:block;">
                 <p><strong>Atomrumpf:</strong> positiv geladener Rest eines Metallatoms nach Abgabe der Valenzelektronen (Kern + Innenelektronen).</p>
-                <p><strong>delokalisiert:</strong> „nicht mehr an ein bestimmtes Atom gebunden“. Die freigesetzten Elektronen gehören nach der Abgabe keinem einzelnen Atom mehr – sie können sich frei bewegen.</p>
+                <p><strong>delokalisiert:</strong> „nicht mehr an ein bestimmtes Atom gebunden“. Die freigesetzten Elektronen gehören keinem einzelnen Atom mehr.</p>
             </div>
             <div class="heft-notice" style="display:block;">
                 <p><strong>Arbeitsauftrag 1:</strong> Übernimm die beiden Definitionen exakt so in dein Heft.</p>
@@ -167,19 +171,19 @@
         </div>
         <div id="simple-task" style="display:none;">
             <div class="heft-notice" style="display:block;">
-                <p><strong>Arbeitsauftrag 2: Magnesium (Mg²⁺) als einfaches Modell</strong></p>
+                <p><strong>Arbeitsauftrag 2: Mg²⁺ als einfaches Modell</strong></p>
                 <ol>
                     <li>Blauer Kreis mit <strong>2+</strong> in der Mitte (positiver Atomrumpf).</li>
-                    <li>Großer <strong>gestrichelter Kreis</strong> (Außenschale).</li>
-                    <li>Zwei kleine Punkte <u>in</u> den Bereich des gestrichelten Kreises.</li>
+                    <li>Großer <strong>gestrichelter Kreis</strong> darum herum.</li>
+                    <li>Zwei kleine Punkte <u>in</u> den gestrichelten Kreis zeichnen.</li>
                     <li>Beschrifte: <em>positiver Atomrumpf</em> und <em>Valenzelektronen</em>.</li>
                 </ol>
-                <button class="check-btn" style="background:var(--amber); margin-top:10px" onclick="showPattern('pattern-s')">Musterlösung ansehen</button>
+                <button class="check-btn" style="background:var(--amber); margin-top:10px" onclick="showPattern('pattern-s')">Lösung ansehen</button>
                 <div id="pattern-s" class="pattern-solution">
                     <svg width="220" height="220" viewBox="0 0 100 100">
                         <circle cx="50" cy="50" r="42" fill="none" stroke="#94a3b8" stroke-dasharray="3"/><circle cx="50" cy="50" r="14" fill="#dbeafe" stroke="#3b82f6"/><text x="50" y="53" text-anchor="middle" font-size="6" font-weight="bold">2+</text>
                         <circle cx="50" cy="22" r="2.5" fill="#f59e0b"/><circle cx="50" cy="78" r="2.5" fill="#f59e0b"/>
-                        <line x1="62" y1="50" x2="80" y2="45" stroke="black" stroke-width="0.5"/><text x="82" y="46" font-size="5" font-weight="bold">positiver Atomrumpf</text>
+                        <line x1="62" y1="50" x2="82" y2="45" stroke="black" stroke-width="0.5"/><text x="84" y="46" font-size="5" font-weight="bold">positiver Atomrumpf</text>
                         <line x1="50" y1="22" x2="75" y2="15" stroke="black" stroke-width="0.5"/><text x="77" y="16" font-size="5" font-weight="bold">Valenzelektronen</text>
                     </svg>
                 </div>
@@ -221,7 +225,7 @@
         <div class="fachbegriff-box" style="display:block;">
             <p><strong>Metallgitter:</strong> Die regelmäßige Anordnung der positiv geladenen Atomrümpfe.</p>
             <p><strong>Elektronengas:</strong> Die Gesamtheit der delokalisierten Elektronen dazwischen.</p>
-            <p><strong>Elektronengasmodell:</strong> Das gesamte Modell aus Metallgitter und Elektronengas.</p>
+            <p><strong>Elektronengasmodell:</strong> Das gesamte Modell aus Metallgitter und Elektronengas bezeichnet man als Elektronengasmodell.</p>
         </div>
         <div class="heft-notice" style="display:block;">
             <p><strong>3) Das Elektronengasmodell</strong></p>
@@ -273,6 +277,7 @@
   }
 
   function runAnim() {
+    document.getElementById('animBtn3').disabled=true;
     document.getElementById('v1').style.transition="all 1.2s ease-in"; document.getElementById('v1').style.transform="translate(-130px, -40px)";
     document.getElementById('v2').style.transition="all 1.2s ease-in"; document.getElementById('v2').style.transform="translate(130px, 40px)";
     document.getElementById('outer-l').style.opacity="0.1";
@@ -280,8 +285,15 @@
   }
 
   function confirmStep3Definitions() { document.getElementById('simple-task').style.display='block'; }
-  function selectBondOption(type, id) { document.querySelectorAll('#step-5 .quiz-option').forEach(opt => opt.classList.remove('selected')); document.getElementById(id).classList.add('selected'); selectedBondType = type; }
-  function checkStep5() { if(selectedBondType === 'correct') { document.getElementById('final-def').style.display='block'; document.getElementById('btn5').disabled=true; } else { alert("Das stimmt noch nicht ganz!"); } }
+  function selectBondOption(type, id) { 
+    document.querySelectorAll('#step-5 .quiz-option').forEach(opt => opt.classList.remove('selected')); 
+    document.getElementById(id).classList.add('selected'); 
+    selectedBondType = type; 
+  }
+  function checkStep5() { 
+    if(selectedBondType === 'correct') { document.getElementById('final-def').style.display='block'; document.getElementById('btn5').disabled=true; } 
+    else { alert("Überlege nochmal: Welche Teilchen ziehen sich gegenseitig an?"); } 
+  }
   function showNextTip() { document.getElementById('tipp-list-container').style.display = 'block'; if(tipIdx < 5) { tipIdx++; document.getElementById('tip-' + tipIdx).style.display = 'block'; } }
 
   const container = document.getElementById('dnd-container');
@@ -301,15 +313,9 @@
     const f = document.getElementById('grid-f');
     f.style.display = 'block';
     let pos = Array.from(all).map(a => ({ x: parseFloat(a.style.left), y: parseFloat(a.style.top) }));
-
-    // Sortieren nach Y, um Reihen zu identifizieren
     pos.sort((a, b) => a.y - b.y);
-
-    // Gruppierung in 3 Reihen (idealerweise 3 pro Reihe)
     let r1 = pos.slice(0, 3).sort((a,b) => a.x - b.x);
     let r2 = pos.slice(3, 6).sort((a,b) => a.x - b.x);
-    let r3 = pos.slice(6, 9).sort((a,b) => a.x - b.x);
-
     let minX = Math.min(...pos.map(p => p.x)), maxX = Math.max(...pos.map(p => p.x));
     let minY = Math.min(...pos.map(p => p.y)), maxY = Math.max(...pos.map(p => p.y));
     let spread = (maxX - minX) + (maxY - minY);
@@ -319,16 +325,14 @@
       f.style.color = "var(--amber)";
       return;
     }
-
-    // Offset-Check: Durchschnitts-X von Reihe 1 und Reihe 2 vergleichen
     let avgX1 = (r1[0].x + r1[1].x + r1[2].x) / 3;
     let avgX2 = (r2[0].x + r2[1].x + r2[2].x) / 3;
     let xOffset = Math.abs(avgX1 - avgX2);
 
-    if(xOffset < 25) { // Zu gerade untereinander (quadratisch)
+    if(xOffset < 25) {
       f.innerText = "Das ist ein ordentliches Gitter, aber noch nicht die 'dichteste Packung'. Metalle ordnen sich versetzt an (wie bei einer Eierpackung). Schiebe die zweite Reihe so, dass die Kerne unter den Lücken der ersten Reihe liegen.";
       f.style.color = "var(--amber)";
-    } else { // Versetzt
+    } else {
       f.innerText = "Hervorragend gepackt! Du hast das versetzte Metallgitter korrekt aufgebaut.";
       f.style.color = "var(--green)";
       document.getElementById('checkG').disabled = true;
