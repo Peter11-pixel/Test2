@@ -120,7 +120,9 @@
         <button class="check-btn" style="background: var(--amber)" onclick="showPattern('pattern2')">Lösung ansehen</button>
         <div id="pattern2" class="pattern-solution">
             <svg width="240" height="240" viewBox="0 0 200 200">
-                <circle cx="100" cy="100" r="28" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="58" fill="none" stroke="#ccc" /><circle cx="100" cy="100" r="88" fill="none" stroke="#ccc" />
+                <circle cx="100" cy="100" r="28" fill="none" stroke="#ccc" />
+                <circle cx="100" cy="100" r="58" fill="none" stroke="#ccc" />
+                <circle cx="100" cy="100" r="88" fill="none" stroke="#ccc" />
                 <circle cx="100" cy="100" r="14" fill="#dbeafe" stroke="#3b82f6"/><text x="100" y="104" text-anchor="middle" font-size="9" font-weight="bold">p=12</text>
                 <circle cx="100" cy="85" r="3.5" fill="#64748b"/><circle cx="100" cy="115" r="3.5" fill="#64748b"/>
                 <circle cx="100" cy="58" r="3.5" fill="#64748b"/><circle cx="100" cy="142" r="3.5" fill="#64748b"/><circle cx="58" cy="100" r="3.5" fill="#64748b"/><circle cx="142" cy="100" r="3.5" fill="#64748b"/>
@@ -160,7 +162,7 @@
         <div id="definitions-block" style="display:none;">
             <div class="fachbegriff-box" style="display:block;">
                 <p><strong>Atomrumpf:</strong> positiv geladener Rest eines Metallatoms nach Abgabe der Valenzelektronen (Kern + Innenelektronen).</p>
-                <p><strong>delokalisiert:</strong> „nicht mehr an ein bestimmtes Atom gebunden“. Die freigesetzten Elektronen gehören nach der Abgabe keinem einzelnen Atom mehr – sie können sich frei bewegen.</p>
+                <p><strong>delokalisiert:</strong> „nicht mehr an ein bestimmtes Atom gebunden“. Die freigesetzten Elektronen gehören nach der Abgabe keinem einzelnen Atom mehr.</p>
             </div>
             <div class="heft-notice" style="display:block;">
                 <p><strong>Arbeitsauftrag 1:</strong> Übernimm die beiden Definitionen exakt so in dein Heft.</p>
@@ -194,10 +196,9 @@
   <div class="step" id="step-4">
     <span style="font-weight:bold; color:var(--blue);">SCHRITT 4</span>
     <h2>Das Metallgitter bauen</h2>
-    <p>Ordne die Atomrümpfe am dichtesten an. **Achtung: Es muss eine versetzte Anordnung sein!** Nutze die 5 Tipps unten.</p>
+    <p>Ordne die Atomrümpfe so dicht wie möglich an. Wenn du nicht weiterkommst verwende die 5 Tippkarten, die du unten nacheinander anschauen kannst.</p>
     <div id="dnd-container">
         <div class="draggable-complex locked" style="left:120px; top:120px;"><div class="shell-dashed"></div><div class="core-inner">2+</div><div class="electron-small e-pos-1"></div><div class="electron-small e-pos-2"></div></div>
-        
         <div class="draggable-complex" style="left:60px; top:360px;"><div class="shell-dashed"></div><div class="core-inner">2+</div><div class="electron-small e-pos-1"></div><div class="electron-small e-pos-2"></div></div>
         <div class="draggable-complex" style="left:140px; top:360px;"><div class="shell-dashed"></div><div class="core-inner">2+</div><div class="electron-small e-pos-1"></div><div class="electron-small e-pos-2"></div></div>
         <div class="draggable-complex" style="left:220px; top:360px;"><div class="shell-dashed"></div><div class="core-inner">2+</div><div class="electron-small e-pos-1"></div><div class="electron-small e-pos-2"></div></div>
@@ -210,11 +211,11 @@
     
     <div style="text-align:center;"><button class="check-btn" style="background:var(--amber-light); color:var(--amber); margin-bottom:10px;" onclick="showNextTip()">💡 Nächster Tipp</button></div>
     <div id="tipp-list-container" class="tipp-list">
-        <div class="tipp-item" id="tip-1">Tipp 1: Schiebe zunächst ein einziges Teilchen direkt neben das feststehende Teilchen oben links. Bewege es so lange, bis sich die beiden äußeren gestrichelten Kreise genau berühren. Die blauen Kerne in der Mitte dürfen sich dabei auf keinen Fall überlappen.</div>
-        <div class="tipp-item" id="tip-2">Tipp 2: Baue jetzt eine erste Reihe von 3 Teilchen nebeneinander: Platziere zwei weitere Teilchen rechts neben dem feststehenden Teilchen, sodass alle drei auf gleicher Höhe sind und sich die Außenkreise jeweils berühren. Du hast dann eine waagerechte Reihe von 3 Teilchen.</div>
-        <div class="tipp-item" id="tip-3">Tipp 3: Baue jetzt eine zweite Reihe direkt unter der ersten: Schiebe 3 Teilchen so weit nach oben, bis sich ihre äußeren Kreise mit denen der oberen Reihe berühren. Die zweite Reihe muss auf der gleichen senkrechten Höhe beginnen wie die erste – also linksbündig.</div>
-        <div class="tipp-item" id="tip-4">Tipp 4: Füge eine dritte Reihe unter der zweiten ein – genau nach demselben Prinzip. Du solltest jetzt ein 3×3-Gitter aus 9 Teilchen haben, bei dem alle Außenkreise der benachbarten Teilchen sich berühren. Das ist das Metallgitter.</div>
-        <div class="tipp-item" id="tip-5">Tipp 5: Drücke jetzt auf „Anordnung prüfen“. Wenn die Rückmeldung noch orange oder rot ist, schiebe alle Teilchen noch etwas enger zusammen – die gestrichelten Außenkreise müssen sich wirklich berühren oder leicht überlappen. Achte darauf, dass kein Teilchen alleine außerhalb des Gitters steht.</div>
+        <div class="tipp-item" id="tip-1"><strong>Tipp 1:</strong> Schiebe zunächst ein einziges Teilchen direkt neben das feststehende Teilchen oben links. Bewege es so lange, bis sich die beiden äußeren gestrichelten Kreise genau berühren. Die blauen Kerne in der Mitte dürfen sich dabei auf keinen Fall überlappen.</div>
+        <div class="tipp-item" id="tip-2"><strong>Tipp 2:</strong> Baue jetzt eine erste Reihe von 3 Teilchen nebeneinander: Platziere zwei weitere Teilchen rechts neben dem feststehenden Teilchen, sodass alle drei auf gleicher Höhe sind und sich die Außenkreise jeweils berühren. Du hast dann eine waagerechte Reihe von 3 Teilchen.</div>
+        <div class="tipp-item" id="tip-3"><strong>Tipp 3:</strong> Baue jetzt eine zweite Reihe direkt unter der ersten: Schiebe 3 Teilchen so weit nach oben, bis sich ihre äußeren Kreise mit denen der oberen Reihe berühren. Die zweite Reihe muss auf der gleichen senkrechten Höhe beginnen wie die erste – also linksbündig.</div>
+        <div class="tipp-item" id="tip-4"><strong>Tipp 4:</strong> Füge eine dritte Reihe unter der zweiten ein – genau nach demselben Prinzip. Du solltest jetzt ein 3×3-Gitter aus 9 Teilchen haben, bei dem alle Außenkreise der benachbarten Teilchen sich berühren. Das ist das Metallgitter.</div>
+        <div class="tipp-item" id="tip-5"><strong>Tipp 5:</strong> Drücke jetzt auf „Anordnung prüfen“. Wenn die Rückmeldung noch orange oder rot ist, schiebe alle Teilchen noch etwas enger zusammen – die gestrichelten Außenkreise müssen sich wirklich berühren oder leicht überlappen. Achte darauf, dass kein Teilchen alleine außerhalb des Gitters steht.</div>
     </div>
 
     <div id="grid-f" class="feedback-msg"></div>
@@ -283,10 +284,18 @@
   }
 
   function confirmStep3Definitions() { document.getElementById('simple-task').style.display='block'; }
-  function selectBondOption(type, id) { document.querySelectorAll('#step-5 .quiz-option').forEach(opt => opt.classList.remove('selected')); document.getElementById(id).classList.add('selected'); selectedBondType = type; }
-  function checkStep5() { if(selectedBondType === 'correct') { document.getElementById('final-def').style.display='block'; document.getElementById('btn5').disabled=true; } else { alert("Das stimmt noch nicht ganz!"); } }
+  function selectBondOption(type, id) { 
+    document.querySelectorAll('#step-5 .quiz-option').forEach(opt => opt.classList.remove('selected')); 
+    document.getElementById(id).classList.add('selected'); 
+    selectedBondType = type; 
+  }
+  function checkStep5() { 
+    if(selectedBondType === 'correct') { document.getElementById('final-def').style.display='block'; document.getElementById('btn5').disabled=true; } 
+    else { alert("Überlege nochmal: Welche Teilchen ziehen sich gegenseitig an?"); } 
+  }
   function showNextTip() { document.getElementById('tipp-list-container').style.display = 'block'; if(tipIdx < 5) { tipIdx++; document.getElementById('tip-' + tipIdx).style.display = 'block'; } }
 
+  // Drag & Drop Logic
   const container = document.getElementById('dnd-container');
   const items = document.querySelectorAll('.draggable-complex:not(.locked)');
   let activeItem = null;
@@ -314,26 +323,22 @@
     let spread = (maxX - minX) + (maxY - minY);
 
     if(spread > 850) {
-      f.innerText = "Das Gitter ist noch viel zu locker gepackt. Schiebe die Teilchen enger zusammen!";
-      f.style.color = "var(--red)";
-      return;
+      f.innerText = "Die Teilchen sind noch viel zu locker verteilt. Schiebe sie enger zusammen!";
+      f.style.color = "var(--red)"; return;
     }
 
-    // Offset-Validierung (WICHTIG!)
     let avgX1 = (r1[0].x + r1[1].x + r1[2].x) / 3;
     let avgX2 = (r2[0].x + r2[1].x + r2[2].x) / 3;
     let avgX3 = (r3[0].x + r3[1].x + r3[2].x) / 3;
-
     let offset12 = Math.abs(avgX1 - avgX2);
     let offset23 = Math.abs(avgX2 - avgX3);
 
     if(offset12 < 35 || offset23 < 35) {
       f.innerText = "Das ist noch eine quadratische Struktur. Metalle ordnen sich versetzt an (Lücke auf Lücke), um stabiler zu sein. Verschiebe die mittlere Reihe!";
       f.style.color = "var(--red)";
-      f.style.border = "2px solid var(--red)";
     } else {
       f.innerText = "Hervorragend! Das versetzte Metallgitter ist korrekt und stabil gepackt.";
-      f.style.color = "var(--green)"; f.style.border = "none";
+      f.style.color = "var(--green)";
       document.getElementById('checkG').disabled = true;
       all.forEach(a => a.classList.add('locked'));
       document.getElementById('task4').style.display = 'block';
